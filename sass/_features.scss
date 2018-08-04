@@ -1,0 +1,29 @@
+.features{
+  //background-color: $color-grey-light-1;
+  grid-column: center-start/center-end;
+  padding: 15rem 0;
+  grid-gap: 5rem;
+  display: grid;
+  //grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  align-items: start;
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 8rem 0;
+  }
+}
+
+.feature{
+  display: grid;
+  grid-template-columns: minmax(min-content, 5rem) 1fr;
+  &__icon{
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: $color-primary;
+    transform: translateY(-1rem);
+    grid-row: 1 / span 2;
+  }
+
+  &__text{
+    font-size: 1.7rem;
+  }
+}
